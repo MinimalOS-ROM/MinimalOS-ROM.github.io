@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Minimal OS — Distraction-Free Android 12.1 for Dumbphones</title>
+  <style>
+    :root {
+      --bg: #0b0b0c;
+      --fg: #f4f4f5;
+      --muted: #a1a1aa;
+      --border: #27272a;
+      --accent: #facc15;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: "Space Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+      background: var(--bg);
+      color: var(--fg);
+      line-height: 1.6;
+      padding: 3rem 1.5rem;
+      max-width: 720px;
+      margin: 0 auto;
+    }
+    .badge {
+      display: inline-block;
+      border: 1px solid var(--accent);
+      color: var(--accent);
+      padding: 0.25rem 0.75rem;
+      font-size: 0.8rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 1.5rem;
+    }
+    h1 { font-size: 2.25rem; margin-bottom: 0.75rem; }
+    p { color: var(--muted); margin-bottom: 1.5rem; }
+    .card {
+      border: 1px solid var(--border);
+      padding: 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .card h2 { font-size: 1.05rem; margin-bottom: 0.5rem; color: var(--fg); }
+    ul { list-style: none; color: var(--muted); }
+    ul li::before { content: "— "; color: var(--fg); }
+    pre {
+      background: #141417;
+      border: 1px solid var(--border);
+      padding: 1rem;
+      overflow-x: auto;
+      font-size: 0.85rem;
+      color: var(--fg);
+    }
+    a { color: var(--fg); text-decoration: underline; }
+    footer { margin-top: 3rem; font-size: 0.8rem; color: var(--muted); }
+  </style>
+</head>
+<body>
+  <div class="badge">Work in Progress — Minimal OS 1.0</div>
+  <h1>Minimal OS</h1>
+  <p>
+    A lightweight, distraction-free custom Android 12.1 (LineageOS 19.1) ROM
+    built specifically for dumbphones and flip phones like the <strong>Cat S22 Flip</strong>.
+  </p>
+
+  <div class="card">
+    <h2>What's Included</h2>
+    <ul>
+      <li>Minimalist Launcher (Trebuchet) &amp; monochrome Dialer</li>
+      <li>Keypad-friendly navigation &amp; SystemUI tweaks</li>
+      <li>Clean, bloat-free Android 12.1 base</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h2>Sync the Source</h2>
+    <pre>repo init -u https://github.com/MinimalOS-ROM/android.git -b minimal-1.0
+repo sync -c -j$(nproc)</pre>
+  </div>
+
+  <p>
+    Follow development on <a href="https://github.com/MinimalOS-ROM">GitHub (MinimalOS-ROM)</a>.
+  </p>
+
+  <footer>Minimal OS 1.0 &middot; Work in Progress</footer>
+</body>
+</html>
